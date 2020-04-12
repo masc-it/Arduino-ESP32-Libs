@@ -21,7 +21,7 @@ An ArduinoHTTPClient header-only wrapper that wants to make HTTP requests an eas
 
 - Simple POST request
 
-
+```
     WiFiEspClient* client = new WiFiEspClient(); // or any other class that extends Client
     HttpRequest server1(client, "your_server.com");
     
@@ -34,26 +34,25 @@ An ArduinoHTTPClient header-only wrapper that wants to make HTTP requests an eas
         .send();
 
     Serial.println(response);
-    
+``` 
 - Simple GET request
-
-
-    WiFiEspClient* client = new WiFiEspClient(); // or any other class that extends Client
-    HttpRequest server1(client, "your_server.com");
+```
+WiFiEspClient* client = new WiFiEspClient(); // or any other class that extends Client
+HttpRequest server1(client, "your_server.com");
     
-    String response = server1->buildGetRequest()
-        .setDestination("your/get/endpoint/path")  // mandatory
-        .setTimeout(5000)                      // optional
-        .addParameter("param1", "value1")      // if any payload
-        .addParameter("param2", "value2")
-        .addParameter("param3", "value3")
-        .send();
+String response = server1->buildGetRequest()
+   .setDestination("your/get/endpoint/path")  // mandatory
+   .setTimeout(5000)                      // optional
+   .addParameter("param1", "value1")      // if any payload
+   .addParameter("param2", "value2")
+   .addParameter("param3", "value3")
+   .send();
         
-    Serial.println(response);
+Serial.println(response);
     
-    String response_2 = server1->buildGetRequest()
-        .setDestination("your/get/endpoint/path")  // mandatory
-        .send();
+String response_2 = server1->buildGetRequest()
+   .setDestination("your/get/endpoint/path")  // mandatory
+   .send();
         
-    Serial.println(response_2);
-    
+Serial.println(response_2);
+```
