@@ -3,7 +3,7 @@
 An ArduinoHTTPClient header-only wrapper that wants to make HTTP requests an easier job.
 
 ## Features
-- Make complete GET or POST requests with a single method call (Builder pattern and chaining)
+- Make complete GET or POST requests with a single method call ([Builder pattern and chaining](https://en.wikipedia.org/wiki/Builder_pattern))
 - Add parameters/payload to your requests
 - Set timeouts
 - Set endpoint to contact with
